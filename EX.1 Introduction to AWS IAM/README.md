@@ -1,4 +1,7 @@
-# Lab 1 - Introduction to AWS Identity and Access Management (IAM)
+Lab 1 - Introduction to AWS Identity and Access Management (IAM)
+#### **Name:** Prabhakaran P 
+#### **Reg No** 212224040236
+
 
 ## Title
 Introduction to AWS Identity and Access Management (IAM)
@@ -66,8 +69,5 @@ The objective of this lab is to understand how AWS Identity and Access Managemen
 ## Conclusion
 This lab provided hands-on experience with AWS IAM by demonstrating how organizations manage secure access to cloud resources. Assigning users to groups with predefined policies simplified permission management and ensured role-based access control across AWS services.
 
-
-## Author
-**Name:** Your Name and (Reg No)
 **Course:** Introduction to Cloud Computing  
 
