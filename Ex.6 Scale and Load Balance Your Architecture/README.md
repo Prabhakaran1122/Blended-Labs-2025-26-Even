@@ -1,10 +1,10 @@
 # Lab 6 – Scale and Load Balance Your Architecture
 
+## Name :- Prabhakaran P
+## Register Number :- 212224040236
+## Date of Submission :- 24-05-2026
+
 ## Title
-
-Scale and Load Balance Your Architecture
-Author : your name   Reg no : yours   Date :
-
 ---
 
 ## Objective
@@ -66,11 +66,32 @@ Students test the setup by generating traffic and observing automatic scaling an
 
 ## Workflow (To be filled by Student)
 
-Describe step-by-step how you performed this experiment in your own words.
+1.I reviewed the existing EC2-based application architecture that I had created in previous experiments to understand how the instances were configured and how the application was being accessed.
 
----
+2.I created a Launch Template by defining the EC2 configuration, including the Amazon Machine Image (AMI), instance type, key pair, security group, and user data script for automatic application setup during instance launch.
+
+3.Using the launch template, I created an Auto Scaling Group. I configured the minimum, maximum, and desired capacity values to control how many EC2 instances should run based on demand. I also selected the appropriate VPC and subnets.
+
+4.Next, I created an Application Load Balancer and configured a target group. I set the protocol and port (HTTP/HTTPS) and defined health check settings to monitor the EC2 instances.
+
+5.I attached the Auto Scaling Group to the target group so that any instances launched by the Auto Scaling Group would automatically register with the Load Balancer.
+
+6.I configured scaling policies based on CPU utilization. I created Amazon CloudWatch alarms to automatically increase the number of instances when CPU usage was high and decrease them when CPU usage was low.
+
+7.Finally, I tested the setup by generating traffic to the Load Balancer DNS name. I observed that the traffic was distributed evenly across instances and that additional instances were launched automatically when the CPU utilization threshold was exceeded.
 
 ## Output Screenshots 
+## LoadBalancer Created 
+
+<img width="1918" height="1084" alt="565573643-0b6a8242-3bea-44a3-bec1-34fdb46a3791" src="https://github.com/user-attachments/assets/f9ad355d-ba5d-4598-8926-97bad731a6b9" />
+
+## LabConfig Created
+
+<img width="1918" height="1095" alt="565573017-a767c53a-4819-4a26-9a26-0610c35feff5" src="https://github.com/user-attachments/assets/1ef3a118-c848-493a-a7d4-11bd6e98950c" />
+
+## Dynamic Scaling Policy created
+
+<img width="1919" height="1086" alt="565572795-90c58620-20bb-44c7-89ba-83bb1785c5d9" src="https://github.com/user-attachments/assets/ce7b9ca2-2e96-483f-b342-42b38e4398c3" />
 
 
 ---
